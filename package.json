@@ -1,0 +1,31 @@
+{
+  "name": "peg44-character-kit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "peg44 3D toy characters (Factory 44 v2 style) for Three.js and Remotion",
+  "scripts": {
+    "setup": "npm install",
+    "lineup": "node scripts/render.mjs Lineup out/lineup.png",
+    "outfits": "node scripts/render.mjs Outfits out/outfits.png",
+    "garment": "node scripts/render.mjs Garment out/garment.png",
+    "talk": "remotion render examples/remotion/index.ts Talk out/talk.mp4 --concurrency 1 --gl=angle",
+    "still": "node scripts/render.mjs",
+    "studio": "remotion studio examples/remotion/index.ts",
+    "three": "esbuild examples/three/main.ts --bundle --format=iife --outfile=examples/three/lineup.js && node -e \"console.log('Open examples/three/index.html in Chrome')\"",
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.8.2",
+    "@remotion/cli": "4.0.370",
+    "@remotion/three": "4.0.370",
+    "@types/react": "19.3.0",
+    "@types/three": "0.170.0",
+    "esbuild": "0.25.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.370",
+    "three": "0.170.0",
+    "typescript": "5.8.3"
+  }
+}
